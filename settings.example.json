@@ -1,0 +1,16 @@
+{
+  "namespace": "custom_doll",
+  "animation_id": "my_doll_animation",
+  "display_name": "My doll animation",
+  "author": "YourName",
+  "version": "1.0.0",
+  "fps": 60,
+  "player_prefix": "actor1_",
+  "doll_root": "root",
+  "rig_profile": "runtime",
+  "entity_types": ["minecraft:player", "minecraft:zombie", "minecraft:husk", "minecraft:skeleton", "minecraft:stray"],
+  "player_genders": ["none", "male", "female", "both"],
+  "doll_genders": ["none", "male", "female", "both"],
+  "stage_seconds": {"1": 6, "2": 6, "3": 4},
+  "tracking": {"enabled": true}
+}

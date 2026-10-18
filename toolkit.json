@@ -1,0 +1,10 @@
+{
+  "name": "Non Player Plushie Animation Export Toolkit",
+  "version": "1.7.0",
+  "python": ">=3.10",
+  "model_reference_revision": "1.6.10",
+  "matching_mod_jar": "non-player-plushie-1.7.0.jar",
+  "distribution": "https://github.com/informacard/non-player-plushie-animation-toolkit",
+  "entry_windows": "Export-DollAnimation.py",
+  "entry_python": "tools/export_doll_pack.py"
+}
