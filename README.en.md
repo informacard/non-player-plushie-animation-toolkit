@@ -85,6 +85,7 @@ Set each clip's loop mode to `loop` or `once`. Non-looping stages play for their
 ```json
 "tracking": {
   "enabled": true,
+  "reverse_injection": false,
   "liquid_ml": 15,
   "mess_amount": 1,
   "skip_defeat": false,
@@ -97,6 +98,8 @@ Omit these fields to use global configuration. `enabled:false` disables this mod
 The secondary camera follows the doll's actual head transform. Its direction uses the game's main `projection_face_mode` setting: `doll_normal` looks along the doll's face normal, and `look_at_face` looks toward the initiating actor's face. Animation packs do not override this user choice.
 
 Advanced fields `player_prefix`, `doll_root`, and `doll_bones` change name mappings only; they do not retarget arbitrary joint layouts. Keep `rig_profile:"runtime"` for new work. `legacy_example` supports only a specific early example project; it is not a general-purpose mode or a way to bypass rig validation.
+
+`tracking.reverse_injection` is optional and defaults to `false`: the animation user injects the doll owner. Set it to `true` for the owner to inject the animation user. Slowdown, liquid/mess, and forced defeat then target the user; the camera stays with the doll owner. When the user is a mob, reverse mode plays the animation and camera only: mob receiving effects are skipped and are never redirected to the owner. Requires Non Player Plushie 1.7.1 with reverse-injection support or newer.
 
 ## Command line
 

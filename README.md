@@ -23,3 +23,9 @@ This repository contains animation authoring tools and reference assets, not the
 本仓库是动画制作工具与参考素材，不包含 mod。请与配套版本的 Non Player Plushie 一起使用。无需 pip 依赖；文件选择窗口使用 tkinter，不可用时可在命令行传入工程路径。
 
 Created for Non Player Plushie by infinitycard (GitHub: informacard). Reference assets retain their original authorship. No additional redistribution license is granted here.
+
+## Injection direction / 注入方向
+
+In the project's `.doll-export.json`, set `tracking.reverse_injection` to `false` for user → doll owner, or `true` for doll owner → user. The default is `false`. Reverse mode skips receiving effects when the user is a mob, while retaining the animation and camera. Requires the matching 1.7.1 mod build with reverse-injection support or newer.
+
+在工程配套的 `.doll-export.json` 中设置 `tracking.reverse_injection`：`false` 为使用者 → 娃娃主人（默认），`true` 为娃娃主人 → 使用者。反向模式下，怪物使用者只播放动画和投影，跳过接收效果。需要配套的含反向注入功能的 1.7.1 mod 或更新版本。

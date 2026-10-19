@@ -241,7 +241,7 @@ def export(source, output, settings):
     tracking = settings.get("tracking", {"enabled": True})
     if not isinstance(tracking, dict):
         raise ValueError("tracking must be an object")
-    for key in ("enabled", "skip_defeat"):
+    for key in ("enabled", "skip_defeat", "reverse_injection"):
         if key in tracking and not isinstance(tracking[key], bool):
             raise ValueError(f"tracking.{key} must be true or false")
     for key in ("liquid_ml", "mess_amount"):
