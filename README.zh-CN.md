@@ -99,7 +99,7 @@ Molang 表达式、pre/post 双值帧、step/Catmull-Rom、全局旋转、四元
 
 高级字段 `player_prefix`、`doll_root`、`doll_bones` 只改变名称映射，不会自动修复任意骨架的关节。新作品保持 `rig_profile:"runtime"`。`legacy_example` 仅兼容早期特定示例，不是通用模式；不能用于随意跳过骨架校验。
 
-`tracking.reverse_injection` 为可选布尔值，默认 `false`：动画使用者注入娃娃主人；设为 `true` 则由娃娃主人注入动画使用者。减速、液体/mess 与战败效果会跟随接收方，摄像头仍显示给娃娃主人。如果使用者是怪物，反向模式只播放动画与投影，跳过怪物接收效果，不会转而注入娃娃主人。需要包含反向注入功能的 Non Player Plushie 1.7.1 或更新版本。
+`tracking.reverse_injection` 为可选布尔值，默认 `false`：动画使用者注入娃娃主人；设为 `true` 则由娃娃主人注入动画使用者。只反转液体/mess 注入。减速、战败动画、短暂禁止挣扎、脉冲及投影始终保留在娃娃主人身上；使用者不承受减速或战败动画。如果使用者是怪物，仅跳过液体/mess 注入，娃娃主人仍承受配置的控制效果。需要包含反向注入功能的 Non Player Plushie 1.7.1 或更新版本。
 
 ## 命令行
 

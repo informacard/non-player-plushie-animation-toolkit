@@ -26,6 +26,6 @@ Created for Non Player Plushie by infinitycard (GitHub: informacard). Reference 
 
 ## Injection direction / 注入方向
 
-In the project's `.doll-export.json`, set `tracking.reverse_injection` to `false` for user → doll owner, or `true` for doll owner → user. The default is `false`. Reverse mode skips receiving effects when the user is a mob, while retaining the animation and camera. Requires the matching 1.7.1 mod build with reverse-injection support or newer.
+In the project's `.doll-export.json`, set `tracking.reverse_injection` to `false` for user → doll owner, or `true` for doll owner → user. The default is `false`. Only liquid/mess injection reverses. Slowdown, forced defeat, temporary struggle protection, pulses and camera stay on the doll owner. The user receives no slowdown or forced defeat. If the user is a mob, skip liquid/mess injection only; owner control effects remain active. Requires the matching 1.7.1 mod build with reverse-injection support or newer.
 
-在工程配套的 `.doll-export.json` 中设置 `tracking.reverse_injection`：`false` 为使用者 → 娃娃主人（默认），`true` 为娃娃主人 → 使用者。反向模式下，怪物使用者只播放动画和投影，跳过接收效果。需要配套的含反向注入功能的 1.7.1 mod 或更新版本。
+在工程配套的 `.doll-export.json` 中设置 `tracking.reverse_injection`：`false` 为使用者 → 娃娃主人（默认），`true` 为娃娃主人 → 使用者。只反转液体/mess 注入；减速、战败动画、短暂禁止挣扎、脉冲及投影仍作用于娃娃主人，使用者不承受减速和战败。怪物使用时仅跳过液体/mess 注入，主人的控制效果仍然生效。需要配套的含反向注入功能的 1.7.1 mod 或更新版本。

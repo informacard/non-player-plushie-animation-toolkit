@@ -99,7 +99,7 @@ The secondary camera follows the doll's actual head transform. Its direction use
 
 Advanced fields `player_prefix`, `doll_root`, and `doll_bones` change name mappings only; they do not retarget arbitrary joint layouts. Keep `rig_profile:"runtime"` for new work. `legacy_example` supports only a specific early example project; it is not a general-purpose mode or a way to bypass rig validation.
 
-`tracking.reverse_injection` is optional and defaults to `false`: the animation user injects the doll owner. Set it to `true` for the owner to inject the animation user. Slowdown, liquid/mess, and forced defeat then target the user; the camera stays with the doll owner. When the user is a mob, reverse mode plays the animation and camera only: mob receiving effects are skipped and are never redirected to the owner. Requires Non Player Plushie 1.7.1 with reverse-injection support or newer.
+`tracking.reverse_injection` is optional and defaults to `false`: the animation user injects the doll owner. Set it to `true` for the owner to inject the animation user. Only liquid/mess injection reverses. Slowdown, forced defeat, temporary struggle protection, pulses and the camera always remain on the doll owner; the animation user receives no slowdown or forced defeat. When the user is a mob, skip liquid/mess injection only; the owner still receives the configured control effects. Requires Non Player Plushie 1.7.1 with reverse-injection support or newer.
 
 ## Command line
 
